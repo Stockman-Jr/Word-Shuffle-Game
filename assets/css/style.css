@@ -33,3 +33,75 @@ h2 {
   text-align: center;
   color: #7eb7d1;
 }
+
+.game-area {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(76, 56, 85, 0.5);
+    border: 3px solid #9cd6dd;
+    border-radius: 15px;
+  }
+  
+  #word-box {
+    background-color: #9cd6dd;
+    color: #4c3855;
+    width: 200px;
+    padding: 15px;
+  }
+  
+  .guess-area {
+    padding: 5%;
+  }
+
+  .score-area {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /*Input and Buttons*/
+  input[type="text"] {
+    height: 40px;
+    margin-bottom: 20px;
+    min-width: 300px;
+    border-radius: 15px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+  }
+
+  #guess-btn {
+    padding: 3%;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  button {
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4c3855;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    letter-spacing: 3px;
+  }
+
+  .gradient-border {
+    background: linear-gradient(#fff, #fff) padding-box,
+      linear-gradient(45deg, #9cd6dd, #7eb7d1) border-box;
+    border: 3px solid transparent;
+    border-radius: 50px;
+  }
+  
+  .hidden {
+    display: none;
+    visibility: hidden;
+  }
