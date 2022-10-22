@@ -1,15 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Word Shuffle Game</title>
 </head>
-<body>
-    
 
-<script src="assets/js/script.js"></script>    
+<body>
+
+    <h1>Word Shuffle</h1>
+    <!--Intro & word area-->
+    <div class="display-word">
+        <h2>Guess the word!</h2>
+        <p id="category"></p>
+        <div id="word-box" class="hidden">
+            <h3 id="shuffled-word">place</h3>
+        </div>
+
+        <!--Game Area-->
+        <div class="game-area">
+            <input type="text" id="user-input" class="hidden" />
+
+            <div id="game-mode">
+                <button class="lvl-btn gradient-border" data-type="easy">Easy</button>
+                <button class="lvl-btn gradient-border" data-type="medium">
+                    Medium
+                </button>
+                <button class="lvl-btn gradient-border" data-type="hard">Hard</button>
+
+                <button id="guess-btn" class="hidden gradient-border">Guess!</button>
+            </div>
+        </div>
+
+        <!--Score and life area-->
+        <div class="score-area">
+            <p class="scores">Current score: <span id="score">0</span></p>
+            <p class="life">Lives: <span id="lives">5</span></p>
+        </div>
+
+        <script src="assets/js/script.js"></script>
 </body>
+
 </html>
