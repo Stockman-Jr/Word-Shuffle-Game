@@ -22,12 +22,21 @@ const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil',
 const medWords = ['monkey', 'walrus', 'bobcat', 'jaguar', 'badger', 'hamster', 'weasel', 'beaver', 'donkey', 'raccoon', 'giraffe', 'buffalo', 'leopard', 'gorilla', 'dolphin'];
 const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', 'pinocchio', 'gladiator', 'zoolander', 'halloween', 'inception'];
 
-function getRandomWord() {
+function getRandomWord(array) {
+    let randomWord = array[Math.floor(Math.random() * array.length)]; 
 
+    return randomWord;
 }
 
-function shuffleWord() {
+function shuffleWord(word) {
+    let letters = word.split('');
 
+    for (let i = letters.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [letters[i], letters[j]] = [letters[j], letters[i]];
+    }
+    
+    return letters.join("");
 }
 
 function startGame() {
