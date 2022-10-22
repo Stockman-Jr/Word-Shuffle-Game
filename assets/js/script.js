@@ -17,6 +17,11 @@ let livesRemaining = 5;
 let chosenWord = "";
 let shuffledWord= "";
 
+/*Word Arrays*/ 
+const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil', 'moon', 'tomb', 'grim', 'blood', 'grave', 'spook', 'trick', 'treat'];
+const medWords = ['monkey', 'walrus', 'bobcat', 'jaguar', 'badger', 'hamster', 'weasel', 'beaver', 'donkey', 'raccoon', 'giraffe', 'buffalo', 'leopard', 'gorilla', 'dolphin'];
+const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', 'pinocchio', 'gladiator', 'zoolander', 'halloween', 'inception'];
+
 function getRandomWord() {
 
 }
@@ -34,5 +39,5 @@ function checkAnswer() {
 }
 
 function checkRemainingLives() {
-    
+
 }
