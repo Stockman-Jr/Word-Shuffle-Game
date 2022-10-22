@@ -16,3 +16,23 @@ let score = 0;
 let livesRemaining = 5;
 let chosenWord = "";
 let shuffledWord= "";
+
+function getRandomWord() {
+
+}
+
+function shuffleWord() {
+
+}
+
+function startGame() {
+
+}
+
+function checkAnswer() {
+
+}
+
+function checkRemainingLives() {
+    
+}
