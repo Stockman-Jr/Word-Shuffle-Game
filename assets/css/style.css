@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Roboto+Condensed&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 120%;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+  background: rgb(28, 70, 135);
+  background: linear-gradient(
+    145deg,
+    rgba(119, 80, 126, 1) 0%,
+    rgba(115, 116, 164, 1) 50%,
+    rgba(113, 151, 191, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #9cd6dd;
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h1,
+h2 {
+  font-family: "Bungee", cursive;
+  text-align: center;
+  color: #7eb7d1;
+}
