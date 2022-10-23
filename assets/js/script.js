@@ -1,4 +1,4 @@
-/*DOM elements */
+// DOM elements
 const lvlBtns = document.getElementsByClassName("lvl-btn");
 const guessBtn = document.getElementById('guess-btn');
 const userInput = document.getElementById('user-input');
@@ -10,18 +10,21 @@ const currentWord = document.getElementById('shuffled-word');
 const category = document.getElementById('category');
 const lives = document.getElementById('lives');
 
-/*Global Variables*/ 
+// Global Variables
 let gameMode = "";
 let score = 0;
 let livesRemaining = 5;
 let chosenWord = "";
 let shuffledWord= "";
 
-/*Word Arrays*/ 
+// Word Arrays
 const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil', 'moon', 'tomb', 'grim', 'blood', 'grave', 'spook', 'trick', 'treat'];
 const medWords = ['monkey', 'walrus', 'bobcat', 'jaguar', 'badger', 'hamster', 'weasel', 'beaver', 'donkey', 'raccoon', 'giraffe', 'buffalo', 'leopard', 'gorilla', 'dolphin'];
 const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', 'pinocchio', 'gladiator', 'zoolander', 'halloween', 'inception'];
 
+
+//Wait for the DOM to finish loading before starting the game
+//Get the button elements and add event listeners
 document.addEventListener("DOMContentLoaded", function() {
 
   for (let lvlBtn of lvlBtns) {
@@ -45,12 +48,18 @@ document.addEventListener("DOMContentLoaded", function() {
   
 })
 
+/**
+ * Function to get random word from array
+ */
 function getRandomWord(array) {
     let randomWord = array[Math.floor(Math.random() * array.length)]; 
 
     return randomWord;
 }
 
+/**
+ * Function to shuffle letters in the random word
+ */
 function shuffleWord(word) {
     let letters = word.split('');
 
@@ -61,6 +70,11 @@ function shuffleWord(word) {
     
     return letters.join("");
 }
+
+/**
+ * Check for users chosen difficulty
+ * Starts game based choice
+ */
 
 function startGame(gameMode) {
   guessBtn.classList.remove('hidden');
@@ -90,6 +104,11 @@ function startGame(gameMode) {
   }
 }
 
+/**
+ * Compares users input to the chosen word
+ * Adds to score if correct, removes life if incorrect
+ */
+
 function checkAnswer() {
   if (userInput.value === chosenWord) {
     score++;
@@ -103,11 +122,21 @@ function checkAnswer() {
 
 }
 
+/**
+ * Checks if remaining lives are 0
+ * Initiates game over function if true
+ */
+
 function checkRemainingLives() {
   if (livesRemaining === 0) {
     gameOver();
     }
   }
+
+  /**
+   * Displays a game over message for the user
+   * Play again button resets game
+   */
 
 function gameOver() {
   guessBtn.classList.add('hidden');
