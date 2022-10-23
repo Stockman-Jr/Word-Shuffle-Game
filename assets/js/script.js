@@ -90,6 +90,13 @@ function startGame(gameMode) {
 }
 
 function checkAnswer() {
+  if (userInput.value === chosenWord) {
+    score++;
+    scoreDisplay.innerHTML = score;
+    startGame(gameMode);
+  } else if (userInput.value !== chosenWord) {
+ alert(`Oops, thats wrong. The word was ${chosenWord}`);
+  } 
 
 }
 
