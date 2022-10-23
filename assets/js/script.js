@@ -15,7 +15,7 @@ let gameMode = "";
 let score = 0;
 let livesRemaining = 5;
 let chosenWord = "";
-let shuffledWord= "";
+let shuffledWord = "";
 
 // Word Arrays
 const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil', 'moon', 'tomb', 'grim', 'blood', 'grave', 'spook', 'trick', 'treat'];
@@ -25,50 +25,52 @@ const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', '
 
 //Wait for the DOM to finish loading before starting the game
 //Get the button elements and add event listeners
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
   for (let lvlBtn of lvlBtns) {
-  
-    lvlBtn.addEventListener("click", function() {
-       let difficulty = this.getAttribute("data-type");
+
+    lvlBtn.addEventListener("click", function () {
+      let difficulty = this.getAttribute("data-type");
       if (difficulty === "easy") {
         gameMode = "easy";
         console.log(`you chose ${gameMode}`);
       } else if (difficulty === "medium") {
         gameMode = "medium";
-      console.log(`you chose ${gameMode}`);
-    } else if (difficulty === "hard") {
-      gameMode = "hard";
-      console.log(`you chose ${gameMode}`);
-    }
-    startGame(gameMode);
+        console.log(`you chose ${gameMode}`);
+      } else if (difficulty === "hard") {
+        gameMode = "hard";
+        console.log(`you chose ${gameMode}`);
+      }
+      startGame(gameMode);
     })
- 
+
   }
-  
+
 })
 
 /**
  * Function to get random word from array
  */
-function getRandomWord(array) {
-    let randomWord = array[Math.floor(Math.random() * array.length)]; 
 
-    return randomWord;
+function getRandomWord(array) {
+  let randomWord = array[Math.floor(Math.random() * array.length)];
+
+  return randomWord;
 }
 
 /**
  * Function to shuffle letters in the random word
  */
-function shuffleWord(word) {
-    let letters = word.split('');
 
-    for (let i = letters.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      [letters[i], letters[j]] = [letters[j], letters[i]];
-    }
-    
-    return letters.join("");
+function shuffleWord(word) {
+  let letters = word.split('');
+
+  for (let i = letters.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [letters[i], letters[j]] = [letters[j], letters[i]];
+  }
+
+  return letters.join("");
 }
 
 /**
@@ -91,12 +93,12 @@ function startGame(gameMode) {
     wordBox.innerHTML = shuffledWord;
     category.innerHTML = "Category: Halloween";
     console.log(chosenWord, shuffledWord);
-  } else if ( gameMode === "medium") {
+  } else if (gameMode === "medium") {
     chosenWord = getRandomWord(medWords);
     shuffledWord = shuffleWord(chosenWord);
     wordBox.innerHTML = shuffledWord;
     category.innerHTML = "Category: Animals";
-  } else if ( gameMode === "hard") {
+  } else if (gameMode === "hard") {
     chosenWord = getRandomWord(hardWords);
     shuffledWord = shuffleWord(chosenWord);
     wordBox.innerHTML = shuffledWord;
@@ -115,10 +117,10 @@ function checkAnswer() {
     scoreDisplay.innerHTML = score;
     startGame(gameMode);
   } else if (userInput.value !== chosenWord) {
-   livesRemaining--;
-   lives.innerHTML = livesRemaining;
-   checkRemainingLives();
-  } 
+    livesRemaining--;
+    lives.innerHTML = livesRemaining;
+    checkRemainingLives();
+  }
 
 }
 
@@ -130,20 +132,20 @@ function checkAnswer() {
 function checkRemainingLives() {
   if (livesRemaining === 0) {
     gameOver();
-    }
   }
+}
 
-  /**
-   * Displays a game over message for the user
-   * Play again button resets game
-   */
+/**
+ * Displays a game over message for the user
+ * Play again button resets game
+ */
 
 function gameOver() {
   guessBtn.classList.add('hidden');
   userInput.classList.add('hidden');
   category.classList.add('hidden');
   gameOverMsg.classList.remove('hidden');
-  
+
   document.getElementById('heading').innerHTML = "Game Over";
 
   document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
