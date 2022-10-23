@@ -62,7 +62,31 @@ function shuffleWord(word) {
 }
 
 function startGame(gameMode) {
+  guessBtn.classList.remove('hidden');
+  userInput.classList.remove('hidden');
+  wordBox.classList.remove('hidden');
+  gameModeArea.classList.add('hidden');
 
+  userInput.value = "";
+  userInput.focus();
+
+  if (gameMode === "easy") {
+    chosenWord = getRandomWord(easyWords);
+    shuffledWord = shuffleWord(chosenWord);
+    wordBox.innerHTML = shuffledWord;
+    category.innerHTML = "Category: Halloween";
+    console.log(chosenWord, shuffledWord);
+  } else if ( gameMode === "medium") {
+    chosenWord = getRandomWord(medWords);
+    shuffledWord = shuffleWord(chosenWord);
+    wordBox.innerHTML = shuffledWord;
+    category.innerHTML = "Category: Animals";
+  } else if ( gameMode === "hard") {
+    chosenWord = getRandomWord(hardWords);
+    shuffledWord = shuffleWord(chosenWord);
+    wordBox.innerHTML = shuffledWord;
+    category.innerHTML = "Category: Movie Titles";
+  }
 }
 
 function checkAnswer() {
