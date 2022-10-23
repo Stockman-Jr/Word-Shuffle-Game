@@ -96,3 +96,5 @@ function checkAnswer() {
 function checkRemainingLives() {
 
 }
+
+guessBtn.addEventListener('click', checkAnswer);
