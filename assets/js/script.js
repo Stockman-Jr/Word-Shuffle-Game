@@ -5,6 +5,7 @@ const userInput = document.getElementById('user-input');
 const scoreDisplay = document.getElementById('score');
 const wordBox = document.getElementById('word-box');
 const gameModeArea = document.getElementById('game-mode');
+const gameOverMsg = document.getElementById('game-over');
 const currentWord = document.getElementById('shuffled-word');
 const category = document.getElementById('category');
 const lives = document.getElementById('lives');
@@ -101,6 +102,12 @@ function checkAnswer() {
 }
 
 function checkRemainingLives() {
+  if (livesRemaining === 0) {
+    gameOver();
+    }
+  }
+
+function gameOver() {
 
 }
 

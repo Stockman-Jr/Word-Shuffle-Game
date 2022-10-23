@@ -52,6 +52,7 @@ h2 {
     color: #4c3855;
     width: 200px;
     padding: 15px;
+    margin: 0 auto;
   }
   
   .guess-area {
