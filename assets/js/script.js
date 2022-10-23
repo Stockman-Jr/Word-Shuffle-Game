@@ -96,7 +96,9 @@ function checkAnswer() {
     scoreDisplay.innerHTML = score;
     startGame(gameMode);
   } else if (userInput.value !== chosenWord) {
- alert(`Oops, thats wrong. The word was ${chosenWord}`);
+   livesRemaining--;
+   lives.innerHTML = livesRemaining;
+   checkRemainingLives();
   } 
 
 }
@@ -108,6 +110,22 @@ function checkRemainingLives() {
   }
 
 function gameOver() {
+  guessBtn.classList.add('hidden');
+  userInput.classList.add('hidden');
+  category.classList.add('hidden');
+  gameOverMsg.classList.remove('hidden');
+  
+  document.getElementById('heading').innerHTML = "Game Over";
+
+  document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
+  You scored ${score} points!`;
+
+  wordBox.innerHTML = chosenWord;
+
+  let playAgain = document.getElementById('play-again');
+  playAgain.addEventListener('click', () => {
+    document.location.reload()
+  })
 
 }
 
