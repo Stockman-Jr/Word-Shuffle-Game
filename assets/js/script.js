@@ -1,5 +1,4 @@
 /*DOM elements */
-const ruleBtn = document.getElementById('rule-btn');
 const lvlBtns = document.getElementsByClassName("lvl-btn");
 const guessBtn = document.getElementById('guess-btn');
 const userInput = document.getElementById('user-input');
@@ -22,6 +21,29 @@ const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil',
 const medWords = ['monkey', 'walrus', 'bobcat', 'jaguar', 'badger', 'hamster', 'weasel', 'beaver', 'donkey', 'raccoon', 'giraffe', 'buffalo', 'leopard', 'gorilla', 'dolphin'];
 const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', 'pinocchio', 'gladiator', 'zoolander', 'halloween', 'inception'];
 
+document.addEventListener("DOMContentLoaded", function() {
+
+  for (let lvlBtn of lvlBtns) {
+  
+    lvlBtn.addEventListener("click", function() {
+       let difficulty = this.getAttribute("data-type");
+      if (difficulty === "easy") {
+        gameMode = "easy";
+        console.log(`you chose ${gameMode}`);
+      } else if (difficulty === "medium") {
+        gameMode = "medium";
+      console.log(`you chose ${gameMode}`);
+    } else if (difficulty === "hard") {
+      gameMode = "hard";
+      console.log(`you chose ${gameMode}`);
+    }
+    startGame(gameMode);
+    })
+ 
+  }
+  
+})
+
 function getRandomWord(array) {
     let randomWord = array[Math.floor(Math.random() * array.length)]; 
 
@@ -39,7 +61,7 @@ function shuffleWord(word) {
     return letters.join("");
 }
 
-function startGame() {
+function startGame(gameMode) {
 
 }
 
