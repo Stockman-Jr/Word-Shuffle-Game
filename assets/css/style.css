@@ -83,6 +83,35 @@ main {
 
   /*Modal styling*/
 
+  .modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 60%;
+    border: 3px solid #9cd6dd;
+    border-radius: 20px;
+    color: #4c3855;
+  }
+  
+  #close {
+    color: black;
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+  }
+
   /*Input and Buttons styling*/
   input[type="text"] {
     height: 40px;
