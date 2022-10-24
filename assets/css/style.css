@@ -13,8 +13,8 @@ body {
   background: rgb(28, 70, 135);
   background: linear-gradient(
     145deg,
-    rgba(119, 80, 126, 1) 0%,
-    rgba(115, 116, 164, 1) 50%,
+    rgb(12, 19, 56) 0%,
+    rgb(48, 52, 107) 50%,
     rgba(113, 151, 191, 1) 100%
   );
   background-repeat: no-repeat;
@@ -52,14 +52,14 @@ h2 {
     align-items: center;
     margin: 0 auto;
     text-align: center;
-    background-color: rgba(76, 56, 85, 0.5);
+    background-color:  rgba(12, 2, 20, 0.5);
     border: 3px solid #9cd6dd;
     border-radius: 15px;
   }
   
   #word-box {
     background-color: #9cd6dd;
-    color: #4c3855;
+    color: #0c1338;
     width: 200px;
     padding: 15px;
     margin: 0 auto;
@@ -102,7 +102,7 @@ h2 {
     width: 100px;
     font-size: 18px;
     font-weight: 700;
-    color: #4c3855;
+    color: #0c1338;
     cursor: pointer;
   }
   
