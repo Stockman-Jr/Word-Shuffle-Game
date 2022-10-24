@@ -166,3 +166,13 @@ main {
   }
 
   /*Media queries*/
+
+  @media screen and (max-width: 600px) {
+    .game-area {
+      width: 80%;
+    }
+  
+    h2 {
+      font-size: 130%;
+    }
+  }
