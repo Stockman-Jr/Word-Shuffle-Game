@@ -17,6 +17,22 @@
     <div class="game-area">
         <h2 id="heading">Guess the word!</h2>
         <div class="display-word">
+            <button id="rule-btn" class="gradient-border">Rules</button>
+            <div id="rules-modal" class="modal hidden">
+              <div class="modal-content">
+                <button id="close">x</button>
+                <p id="rules">
+                  Choose a level: easy(3-4 letters), medium(5-6 letters) or
+                  hard(7-8 letters). <br />
+                  Each difficulty is tied to a specific category.<br />
+                  A word will be chosen randomly, where the letters will be
+                  shuffled around.<br />
+                  Your task is to guess what word it is and score as many points
+                  as possible. <br />You will have 5 lives in total. Guess wrong
+                  and lose a life, reach 0 life and the game will be over!
+                </p>
+              </div>
+            </div>
             <p id="category"></p>
             <div id="word-box" class="hidden">
                 <h3 id="shuffled-word">place</h3>

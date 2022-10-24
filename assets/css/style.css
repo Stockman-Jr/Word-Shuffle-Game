@@ -81,6 +81,8 @@ main {
     justify-content: space-evenly;
   }
 
+  /*Modal styling*/
+
   /*Input and Buttons styling*/
   input[type="text"] {
     height: 40px;
