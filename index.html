@@ -15,19 +15,19 @@
     <!--Intro & word area-->
     <div class="game-area">
         <h2 id="heading">Guess the word!</h2>
-    <div class="display-word">
-        <p id="category"></p>
-        <div id="word-box" class="hidden">
-            <h3 id="shuffled-word">place</h3>
+        <div class="display-word">
+            <p id="category"></p>
+            <div id="word-box" class="hidden">
+                <h3 id="shuffled-word">place</h3>
+            </div>
+            <div id="game-over" class="hidden">
+                <p id="message">The word</p>
+                <button id="play-again" class="gradient-border">Play Again</button>
+            </div>
         </div>
-        <div id="game-over" class="hidden">
-          <p id="message">The word</p>
-          <button id="play-again" class="gradient-border">Play Again</button>
-        </div>
-    </div>
 
         <!--Guess Area-->
-      <div class="guess-area">
+        <div class="guess-area">
             <input type="text" id="user-input" class="hidden" />
 
             <div id="game-mode">
@@ -37,16 +37,16 @@
             </div>
             <button id="guess-btn" class="hidden gradient-border">Guess!</button>
         </div>
-    
-</div>
 
-        <!--Score and life area-->
-        <div class="score-area">
-            <p class="scores">Current score: <span id="score">0</span></p>
-            <p class="life">Lives: <span id="lives">5</span></p>
-        </div>
+    </div>
 
-        <script src="assets/js/script.js"></script>
+    <!--Score and life area-->
+    <div class="score-area">
+        <p class="scores">Current score: <span id="score">0</span></p>
+        <p class="life">Lives: <span id="lives">5</span></p>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
