@@ -96,6 +96,7 @@ function startGame(gameMode) {
   userInput.classList.remove('hidden');
   wordBox.classList.remove('hidden');
   gameModeArea.classList.add('hidden');
+  ruleBtn.classList.add('hidden');
 
   userInput.value = "";
   userInput.focus();
