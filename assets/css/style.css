@@ -27,6 +27,18 @@ body {
 /*Headings and paragraph styling*/
 h1 {
   font-size: 200%;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+/*H1 animation*/
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #018085, 0 0 15px #0249ce;
+  }
+  to {
+    text-shadow: 0 0 20px #5c04ff, 0 0 25px #e204ff;
+  }
 }
 
 h1,
