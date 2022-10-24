@@ -1,6 +1,8 @@
 // DOM elements
+const ruleBtn = document.getElementById('rule-btn');
 const lvlBtns = document.getElementsByClassName("lvl-btn");
 const guessBtn = document.getElementById('guess-btn');
+const modal = document.getElementById('rules-modal');
 const userInput = document.getElementById('user-input');
 const scoreDisplay = document.getElementById('score');
 const wordBox = document.getElementById('word-box');
@@ -22,6 +24,17 @@ const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil',
 const medWords = ['monkey', 'walrus', 'bobcat', 'jaguar', 'badger', 'hamster', 'weasel', 'beaver', 'donkey', 'raccoon', 'giraffe', 'buffalo', 'leopard', 'gorilla', 'dolphin'];
 const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', 'pinocchio', 'gladiator', 'zoolander', 'halloween', 'inception'];
 
+
+/**
+ * Function for modal popup to display the rules
+ */
+ ruleBtn.addEventListener('click', function() {
+  modal.classList.remove('hidden');
+  let closeModal = document.getElementById('close');
+  closeModal.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  })
+})
 
 //Wait for the DOM to finish loading before starting the game
 //Get the button elements and add event listeners
