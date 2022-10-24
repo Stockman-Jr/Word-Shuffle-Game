@@ -67,7 +67,7 @@ main {
   #word-box {
     background-color: #9cd6dd;
     color: #0c1338;
-    width: 200px;
+    width: 100%;
     padding: 15px;
     margin: 0 auto;
   }
@@ -176,3 +176,17 @@ main {
       font-size: 130%;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    #user-input {
+      width: 100%;
+    }
+    .game-area {
+      height: 60%;
+    }
+
+    h2 {
+      font-size: 120%;
+    }
+  }
+  
