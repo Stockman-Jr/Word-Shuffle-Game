@@ -32,6 +32,28 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
 
 ### Existing Features
 
+#### Header
+  * Is a simple heading that tells the name of the game and features an eye-catching animation.
+
+#### Rules
+  * The rules button will provide the user with information of how to play the game in a pop-up window when clicked.
+
+#### The game options
+  * The game options lets the user choose from different difficulties which includes: easy(contains 4-5 letters in each word), medium(6-7 letters) and hard(8-9) letters.
+  * This section provides the user with interactive buttons that the user can click to choose difficulty and start the game.
+
+#### Playing the game
+  * This section appears once the user have chosen a difficulty, and informs the user what category the words are tied to,
+  a box containing the shuffled word, a input for the user to type their answer, and a interactive button that lets the user 
+  submit their answer.
+  * The input features an auto focus so that the user don't have to click on the input window everytime they want to type
+  in a guess, users are also able to press the Enter key instead of clicking on the guess button for convinience.
+
+#### Score and life 
+  * Is provided underneath the "gameboard" and shows the user how many points they've scored and how many lives the have left.
+
+#### Game over
+
 
 ### Future Features
 
@@ -52,7 +74,6 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
 
 ### Validator Testing
 
-W3C was used to validate html code on all pages and the CSS code. 
 
 #### CSS
 
