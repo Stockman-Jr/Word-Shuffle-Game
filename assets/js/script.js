@@ -174,4 +174,12 @@ function gameOver() {
 
 }
 
+//Event listeners for guess button, both mouseclick and keydown
 guessBtn.addEventListener('click', checkAnswer);
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+      checkAnswer();
+  }
+
+})
