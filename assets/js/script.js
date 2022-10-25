@@ -118,6 +118,8 @@ function startGame(gameMode) {
     wordBox.innerHTML = shuffledWord;
     category.innerHTML = "Category: Movie Titles";
   }
+
+  
 }
 
 /**
