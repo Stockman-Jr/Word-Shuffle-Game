@@ -1,3 +1,10 @@
+World Shuffle is a simple game that tickles the brain of the user by taking a word and shuffle the letters around.
+While the game itself is quite simple, the task of solving what word it is might be more challengin than you'd think.
+The user will get to choose between three difficulties, where each difficulty is tied to a specific category.
+A word will be randomly picked for the user to guess, and each correct word will provide a point.
+The goal is to get as many points as possible, if the user guesses wrong five times, the game will be over!
+
+
 - - - 
 
 ## Table of Contents
