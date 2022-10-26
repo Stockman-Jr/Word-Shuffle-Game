@@ -1,5 +1,6 @@
 // DOM elements
 const ruleBtn = document.getElementById('rule-btn');
+const startBtn = document.getElementById('start-btn');
 const lvlBtns = document.getElementsByClassName("lvl-btn");
 const guessBtn = document.getElementById('guess-btn');
 const modal = document.getElementById('rules-modal');
@@ -38,28 +39,38 @@ const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', '
 
 //Wait for the DOM to finish loading before starting the game
 //Get the button elements and add event listeners
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
+  startBtn.addEventListener("click", () => {
+   chooseDifficulty();
+  })
+   
+ })
+
+ function chooseDifficulty() {
+  ruleBtn.classList.add('hidden');
+  startBtn.classList.add('hidden');
+  gameModeArea.classList.remove('hidden');
 
   for (let lvlBtn of lvlBtns) {
-
-    lvlBtn.addEventListener("click", function () {
-      let difficulty = this.getAttribute("data-type");
+  
+    lvlBtn.addEventListener("click", function() {
+       let difficulty = this.getAttribute("data-type");
       if (difficulty === "easy") {
         gameMode = "easy";
         console.log(`you chose ${gameMode}`);
       } else if (difficulty === "medium") {
         gameMode = "medium";
-        console.log(`you chose ${gameMode}`);
-      } else if (difficulty === "hard") {
-        gameMode = "hard";
-        console.log(`you chose ${gameMode}`);
-      }
-      startGame(gameMode);
+      console.log(`you chose ${gameMode}`);
+    } else if (difficulty === "hard") {
+      gameMode = "hard";
+      console.log(`you chose ${gameMode}`);
+    }
+    startGame(gameMode);
     })
-
+ 
   }
-
-})
+  
+}
 
 /**
  * Function to get random word from array
