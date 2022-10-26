@@ -141,10 +141,10 @@ main {
     text-transform: uppercase;
   }
 
-  #guess-btn {
-    margin: 0 auto;
+  .button-wrapper {
     display: block;
   }
+
 
   #play-again {
     width: 150px;
@@ -157,8 +157,8 @@ main {
   }
   
   button {
-    height: 40px;
-    width: 100px;
+    height: 50px;
+    width: 120px;
     font-size: 18px;
     font-weight: 700;
     color: #0c1338;
@@ -175,6 +175,8 @@ main {
     border: 3px solid transparent;
     border-radius: 50px;
   }
+
+
 
   /*Hidden elements*/
   

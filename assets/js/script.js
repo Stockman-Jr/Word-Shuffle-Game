@@ -3,6 +3,7 @@ const ruleBtn = document.getElementById('rule-btn');
 const startBtn = document.getElementById('start-btn');
 const lvlBtns = document.getElementsByClassName("lvl-btn");
 const guessBtn = document.getElementById('guess-btn');
+const quitBtn = document.getElementById('quit-btn');
 const modal = document.getElementById('rules-modal');
 const userInput = document.getElementById('user-input');
 const scoreDisplay = document.getElementById('score');
@@ -123,6 +124,7 @@ function startGame(gameMode) {
   wordBox.classList.remove('hidden');
   gameModeArea.classList.add('hidden');
   ruleBtn.classList.add('hidden');
+  quitBtn.classList.remove('hidden');
 
   userInput.value = "";
   userInput.focus();
@@ -220,4 +222,8 @@ userInput.addEventListener('keydown', (event) => {
 })
 guessBtn.addEventListener('click', () => {
   checkAnswer();
+})
+
+quitBtn.addEventListener('click', () => {
+  document.location.reload();
 })
