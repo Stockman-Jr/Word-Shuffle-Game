@@ -86,6 +86,17 @@ function shuffleWord(word) {
   return letters.join("");
 }
 
+function checkUsedWords(array) {
+  var usedWord = chosenWord;
+  var i = array.indexOf(usedWord);
+  console.log(i);
+  if (i != -1) {
+    array.splice(i, 1);
+    console.log(array);
+  } 
+
+    } 
+
 /**
  * Check for users chosen difficulty
  * Starts game based choice
@@ -131,6 +142,13 @@ function checkAnswer() {
   if (userInput.value === chosenWord) {
     score++;
     scoreDisplay.innerHTML = score;
+    if (gameMode === "easy") {
+      checkUsedWords(easyWords);  
+      } else if (gameMode === "medium") {
+        checkUsedWords(medWords); 
+      } else if (gameMode === "hard") {
+        checkUsedWords(hardWords); 
+      }
     startGame(gameMode);
   } else if (userInput.value !== chosenWord) {
     livesRemaining--;
