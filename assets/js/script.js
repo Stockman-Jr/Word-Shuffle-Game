@@ -21,15 +21,18 @@ let chosenWord = "";
 let shuffledWord = "";
 
 // Word Arrays
-const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil', 'moon', 'tomb', 'grim', 'blood', 'grave', 'spook', 'trick', 'treat'];
-const medWords = ['monkey', 'walrus', 'bobcat', 'jaguar', 'badger', 'hamster', 'weasel', 'beaver', 'donkey', 'raccoon', 'giraffe', 'buffalo', 'leopard', 'gorilla', 'dolphin'];
-const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', 'pinocchio', 'gladiator', 'zoolander', 'halloween', 'inception'];
+const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil',
+ 'moon', 'tomb', 'grim', 'blood', 'grave', 'spook', 'trick', 'treat'];
+const medWords = ['monkey', 'walrus', 'bobcat', 'jaguar', 'badger', 'hamster', 'weasel', 
+'beaver', 'donkey', 'raccoon', 'giraffe', 'buffalo', 'leopard', 'gorilla', 'dolphin'];
+const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', 'pinocchio',
+ 'gladiator', 'zoolander', 'halloween', 'inception', 'wolverine', 'whiplash', 'precious', 'footloose', 'megamind', 'bewitched'];
 
 
 /**
  * Function for modal popup to display the rules
  */
- ruleBtn.addEventListener('click', function() {
+ruleBtn.addEventListener('click', function () {
   modal.classList.remove('hidden');
   let closeModal = document.getElementById('close');
   closeModal.addEventListener('click', () => {
@@ -39,37 +42,38 @@ const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', '
 
 //Wait for the DOM to finish loading before starting the game
 //Get the button elements and add event listeners
-document.addEventListener("DOMContentLoaded", function() {
-  startBtn.addEventListener("click", () => {
-   chooseDifficulty();
-  })
-   
- })
+document.addEventListener("DOMContentLoaded", function () {
 
- function chooseDifficulty() {
+  startBtn.addEventListener("click", () => {
+    chooseDifficulty();
+  })
+
+})
+
+function chooseDifficulty() {
   ruleBtn.classList.add('hidden');
   startBtn.classList.add('hidden');
   gameModeArea.classList.remove('hidden');
 
   for (let lvlBtn of lvlBtns) {
-  
-    lvlBtn.addEventListener("click", function() {
-       let difficulty = this.getAttribute("data-type");
+
+    lvlBtn.addEventListener("click", function () {
+      let difficulty = this.getAttribute("data-type");
       if (difficulty === "easy") {
         gameMode = "easy";
         console.log(`you chose ${gameMode}`);
       } else if (difficulty === "medium") {
         gameMode = "medium";
-      console.log(`you chose ${gameMode}`);
-    } else if (difficulty === "hard") {
-      gameMode = "hard";
-      console.log(`you chose ${gameMode}`);
-    }
-    startGame(gameMode);
+        console.log(`you chose ${gameMode}`);
+      } else if (difficulty === "hard") {
+        gameMode = "hard";
+        console.log(`you chose ${gameMode}`);
+      }
+      startGame(gameMode);
     })
- 
+
   }
-  
+
 }
 
 /**
@@ -104,9 +108,9 @@ function checkUsedWords(array) {
   if (i != -1) {
     array.splice(i, 1);
     console.log(array);
-  } 
+  }
 
-    } 
+}
 
 /**
  * Check for users chosen difficulty
@@ -141,7 +145,7 @@ function startGame(gameMode) {
     category.innerHTML = "Category: Movie Titles";
   }
 
-  
+
 }
 
 /**
@@ -155,13 +159,15 @@ function checkAnswer() {
     score++;
     scoreDisplay.innerHTML = score;
     if (gameMode === "easy") {
-      checkUsedWords(easyWords);  
-      } else if (gameMode === "medium") {
-        checkUsedWords(medWords); 
-      } else if (gameMode === "hard") {
-        checkUsedWords(hardWords); 
-      }
-    setTimeout(function(){ startGame(gameMode);}, 1000);  
+      checkUsedWords(easyWords);
+    } else if (gameMode === "medium") {
+      checkUsedWords(medWords);
+    } else if (gameMode === "hard") {
+      checkUsedWords(hardWords);
+    }
+    setTimeout(function () {
+      startGame(gameMode);
+    }, 1000);
   } else if (userInput.value !== chosenWord) {
     livesRemaining--;
     lives.innerHTML = livesRemaining;
