@@ -139,7 +139,7 @@ function startGame(gameMode) {
  */
 
 function checkAnswer() {
-  if (userInput.value === chosenWord) {
+  if (userInput.value.toLowerCase() === chosenWord) {
     wordBox.innerHTML = "Correct!"
     score++;
     scoreDisplay.innerHTML = score;
