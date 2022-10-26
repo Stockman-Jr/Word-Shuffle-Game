@@ -140,6 +140,7 @@ function startGame(gameMode) {
 
 function checkAnswer() {
   if (userInput.value === chosenWord) {
+    wordBox.innerHTML = "Correct!"
     score++;
     scoreDisplay.innerHTML = score;
     if (gameMode === "easy") {
@@ -149,7 +150,7 @@ function checkAnswer() {
       } else if (gameMode === "hard") {
         checkUsedWords(hardWords); 
       }
-    startGame(gameMode);
+    setTimeout(function(){ startGame(gameMode);}, 1000);  
   } else if (userInput.value !== chosenWord) {
     livesRemaining--;
     lives.innerHTML = livesRemaining;
