@@ -20,6 +20,7 @@ let score = 0;
 let livesRemaining = 5;
 let chosenWord = "";
 let shuffledWord = "";
+let highscore = localStorage.getItem("highscore");
 
 // Word Arrays
 const easyWords = ['witch', 'zombie', 'skull', 'candy', 'ghost', 'fear', 'evil',
@@ -101,6 +102,10 @@ function shuffleWord(word) {
 
   return letters.join("");
 }
+
+/**
+ * Check if words has been used to avoid repetition
+ */
 
 function checkUsedWords(array) {
   var usedWord = chosenWord;
@@ -188,6 +193,25 @@ function checkRemainingLives() {
     gameOver();
   }
 }
+
+/**
+ * Checks for new high score and adds to local storage
+ */
+
+ function checkScore() {
+  console.log(score);
+  if (!localStorage.getItem("highscore")) {
+    localStorage.setItem("highscore", score);
+  }
+
+    if (score <= parseInt(highscore)) {
+     return;
+    } else if (score > parseInt(highscore)) {
+      document.getElementById('high-score').innerHTML = score;
+      localStorage.setItem("highscore", score);
+      console.log(highscore);
+    }
+  } 
 
 /**
  * Displays a game over message for the user
