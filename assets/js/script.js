@@ -104,16 +104,22 @@ function shuffleWord(word) {
 }
 
 /**
- * Check if words has been used to avoid repetition
+ * Check if words has been used and removes them from array to avoid repetition
+ * If array contains 5 items, win the game/level
  */
 
-function checkUsedWords(array) {
+function winCondition(array) {
   var usedWord = chosenWord;
   var i = array.indexOf(usedWord);
   console.log(i);
   if (i != -1) {
     array.splice(i, 1);
     console.log(array);
+  } if (array.length === 10) {
+    console.log(score);
+    winGame();
+  } else {
+    setTimeout(function(){ startGame(gameMode);}, 1000);
   }
 
 }
@@ -166,15 +172,12 @@ function checkAnswer() {
     score++;
     scoreDisplay.innerHTML = score;
     if (gameMode === "easy") {
-      checkUsedWords(easyWords);
+      winCondition(easyWords);
     } else if (gameMode === "medium") {
-      checkUsedWords(medWords);
+      winCondition(medWords);
     } else if (gameMode === "hard") {
-      checkUsedWords(hardWords);
+      winCondition(hardWords);
     }
-    setTimeout(function () {
-      startGame(gameMode);
-    }, 1000);
   } else if (userInput.value !== chosenWord) {
     livesRemaining--;
     lives.innerHTML = livesRemaining;
