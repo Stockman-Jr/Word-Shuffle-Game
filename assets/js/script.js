@@ -181,6 +181,7 @@ function checkAnswer() {
   } else if (userInput.value !== chosenWord) {
     livesRemaining--;
     lives.innerHTML = livesRemaining;
+    wordBox.innerHTML = `Bzzzt, not quite. ${livesRemaining} lives remaining!`;
     checkRemainingLives();
   }
 
@@ -194,6 +195,8 @@ function checkAnswer() {
 function checkRemainingLives() {
   if (livesRemaining === 0) {
     gameOver();
+  } else {
+    setTimeout(function(){wordBox.innerHTML = shuffledWord;}, 1000);
   }
 }
 
