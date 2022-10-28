@@ -9,7 +9,7 @@ const userInput = document.getElementById('user-input');
 const scoreDisplay = document.getElementById('score');
 const wordBox = document.getElementById('word-box');
 const gameModeArea = document.getElementById('game-mode');
-const gameOverMsg = document.getElementById('game-over');
+const gameMsg = document.getElementById('message-box');
 const currentWord = document.getElementById('shuffled-word');
 const category = document.getElementById('category');
 const lives = document.getElementById('lives');
@@ -136,7 +136,9 @@ function startGame(gameMode) {
   gameModeArea.classList.add('hidden');
   ruleBtn.classList.add('hidden');
   quitBtn.classList.remove('hidden');
-  gameOverMsg.classList.add('hidden'); 
+  gameMsg.classList.add('hidden'); 
+
+  document.getElementById('heading').innerHTML = "Guess the word!";
 
   userInput.value = "";
   userInput.focus();
@@ -229,7 +231,7 @@ function gameOver() {
   guessBtn.classList.add('hidden');
   userInput.classList.add('hidden');
   category.classList.add('hidden');
-  gameOverMsg.classList.remove('hidden');
+  gameMsg.classList.remove('hidden');
   quitBtn.classList.add('hidden');
 
   document.getElementById('heading').innerHTML = "Game Over";
@@ -240,6 +242,7 @@ function gameOver() {
   wordBox.innerHTML = chosenWord;
 
   let playAgain = document.getElementById('play-again');
+
   playAgain.addEventListener('click', () => {
     document.location.reload()
   })
@@ -250,13 +253,14 @@ function winGame() {
   guessBtn.classList.add('hidden');
   userInput.classList.add('hidden');
   category.classList.add('hidden');
-  gameOverMsg.classList.remove('hidden');
+  gameMsg.classList.remove('hidden');
 
   document.getElementById('heading').innerHTML = "Good job! You won!";
   document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
   You scored ${score} points!`;
   
   let playAgain = document.getElementById('play-again');
+ 
   playAgain.innerHTML = "Next level";
   playAgain.addEventListener('click', () => {
     if (gameMode === "easy") {
