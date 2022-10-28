@@ -10,42 +10,37 @@ body {
   font-size: 120%;
   letter-spacing: 0.1em;
   word-spacing: 0.2em;
-  background: rgb(28, 70, 135);
-  background: linear-gradient(
-    145deg,
-    rgb(12, 19, 56) 0%,
-    rgb(48, 52, 107) 50%,
-    rgba(113, 151, 191, 1) 100%
-  );
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: linear-gradient(-45deg, #740e2d, #191553, #420c61, #035e61);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   height: 100vh;
   color: #9cd6dd;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 5% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 5% 50%;
+  }
 }
 
 
 /*Headings and paragraph styling*/
 h1 {
   font-size: 200%;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-/*H1 animation*/
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #018085, 0 0 15px #0249ce;
-  }
-  to {
-    text-shadow: 0 0 20px #5c04ff, 0 0 25px #e204ff;
-  }
 }
 
 h1,
 h2 {
   font-family: "Bungee", cursive;
   text-align: center;
-  color: #9cd6dd;
 }
 
 #message {
@@ -81,7 +76,7 @@ main {
   height: 400px;
   text-align: center;
   background-color: rgba(12, 2, 20, 0.5);
-  border: 3px solid #9cd6dd;
+  border: 3px solid #c8ff00;
   border-radius: 15px;
   }
   
@@ -155,7 +150,11 @@ main {
     display: block;
   }
 
+  #quit-btn {
+    margin-top: 10px;
+  }
 
+ 
   #play-again {
     width: 150px;
     height: 50px;
@@ -169,21 +168,28 @@ main {
   button {
     height: 50px;
     width: 120px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    color: #0c1338;
+    color: #9cd6dd;
     cursor: pointer;
+    border-radius: 15px;
+    background: none;
+    border: 2px solid;
+    transition: 0.25s;
   }
   
-  button:hover {
-    letter-spacing: 3px;
-  }
 
-  .gradient-border {
-    background: linear-gradient(#fff, #fff) padding-box,
-      linear-gradient(45deg, #9cd6dd, #7eb7d1) border-box;
-    border: 3px solid transparent;
-    border-radius: 50px;
+
+  button:hover,
+  button:focus {
+    border-color: #c8ff00;
+    color: rgb(179, 255, 0);
+  }
+  
+  .raise:hover,
+  .raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em;
+    transform: translateY(-0.25em);
   }
 
 
