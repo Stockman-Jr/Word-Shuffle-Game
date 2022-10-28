@@ -10,6 +10,7 @@ body {
   font-size: 120%;
   letter-spacing: 0.1em;
   word-spacing: 0.2em;
+  margin: 0;
   background: linear-gradient(-45deg, #740e2d, #191553, #420c61, #035e61);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
@@ -29,6 +30,13 @@ body {
   100% {
     background-position: 5% 50%;
   }
+}
+
+/*Header*/
+.header {
+  width: 100%;
+  background-color: rgba(12, 2, 20, 0.5);
+  margin-top: 30px;
 }
 
 
@@ -78,6 +86,7 @@ main {
   background-color: rgba(12, 2, 20, 0.5);
   border: 3px solid #c8ff00;
   border-radius: 15px;
+  margin-top: 50px;
   }
   
   #word-box {
@@ -209,6 +218,10 @@ main {
 
   @media screen and (max-width: 600px) {
     .game-area {
+      width: 80%;
+    }
+
+    #start-btn {
       width: 80%;
     }
   
