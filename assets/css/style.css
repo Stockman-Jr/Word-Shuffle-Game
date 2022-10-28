@@ -163,11 +163,14 @@ main {
 
   .lvl-btn {
     margin: 5px;
+    width: fit-content;
+    padding: 0px 10px;
   }
   
   button {
     height: 50px;
-    width: 120px;
+    width: fit-content;
+    padding: 0px 10px;
     font-size: 20px;
     font-weight: 700;
     color: #9cd6dd;
@@ -184,6 +187,7 @@ main {
   button:focus {
     border-color: #c8ff00;
     color: rgb(179, 255, 0);
+    letter-spacing: 2px;
   }
   
   .raise:hover,
