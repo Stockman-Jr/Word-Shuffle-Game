@@ -56,6 +56,15 @@ h2 {
   color: #c6f3e9;
 }
 
+.scores,
+.life {
+  margin: 20px;
+  background-color: rgba(12, 2, 20, 0.5);
+  border: 3px solid #9cd6dd;
+  border-radius: 5px;
+  padding: 1%;
+}
+
 /*Styling for the main game areas*/
 
 main {
@@ -90,7 +99,8 @@ main {
 
   .score-area {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   /*Modal styling*/
