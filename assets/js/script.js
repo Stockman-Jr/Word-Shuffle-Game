@@ -136,6 +136,7 @@ function startGame(gameMode) {
   gameModeArea.classList.add('hidden');
   ruleBtn.classList.add('hidden');
   quitBtn.classList.remove('hidden');
+  gameOverMsg.classList.add('hidden'); 
 
   userInput.value = "";
   userInput.focus();
@@ -229,6 +230,7 @@ function gameOver() {
   userInput.classList.add('hidden');
   category.classList.add('hidden');
   gameOverMsg.classList.remove('hidden');
+  quitBtn.classList.add('hidden');
 
   document.getElementById('heading').innerHTML = "Game Over";
 
@@ -242,6 +244,29 @@ function gameOver() {
     document.location.reload()
   })
 
+}
+
+function winGame() {
+  guessBtn.classList.add('hidden');
+  userInput.classList.add('hidden');
+  category.classList.add('hidden');
+  gameOverMsg.classList.remove('hidden');
+
+  document.getElementById('heading').innerHTML = "Good job! You won!";
+  document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
+  You scored ${score} points!`;
+  
+  let playAgain = document.getElementById('play-again');
+  playAgain.innerHTML = "Next level";
+  playAgain.addEventListener('click', () => {
+    if (gameMode === "easy") {
+   gameMode = "medium";
+   
+  } else if (gameMode === "medium") {
+    gameMode = "hard";
+  }
+  startGame(gameMode);
+  })  
 }
 
 //Event listeners for guess button, both mouseclick and keydown
