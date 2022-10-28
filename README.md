@@ -1,7 +1,7 @@
 # Word Shuffle
 
 Word Shuffle is a simple game that tickles the brain of the user by taking a word and shuffle the letters around.
-While the game itself is quite simple, the task of solving what word it is might be more challengin than you'd think.
+While the game itself is quite simple, the task of solving what word it is might be more challenging than you'd think.
 The user will get to choose between three difficulties, where each difficulty is tied to a specific category.
 A word will be randomly picked for the user to guess, and each correct word will provide a point.
 The goal is to get as many points as possible, if the user guesses wrong five times, the game will be over!
@@ -24,8 +24,7 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
 * [Deployment](#deployment)
 * [Credits](#credits)
   * [Code](#code)
-  * [Content](#content)
-  * [Media](#media)
+
   
 - - - 
 
@@ -35,7 +34,7 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
 ### Existing Features
 
 #### Header
-  * Is a simple heading that tells the name of the game and features an eye-catching animation.
+  * Is a simple heading that tells the name of the game.
 
 #### Rules
   * The rules button will provide the user with information of how to play the game in a pop-up window when clicked.
@@ -52,7 +51,7 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
   in a guess, users are also able to press the Enter key instead of clicking on the guess button for convinience.
 
 #### Score and life 
-  * Is provided underneath the "gameboard" and shows the user how many points they've scored and how many lives the have left.
+  * Is provided underneath the main game area and lets the user know what their current score is, what their highscore is and how many lives they have left.
 
 #### Game over
 
@@ -113,6 +112,7 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
 ### Main Languages
   * HTML5
   * CSS3
+  * JavaScript
 
 ### Frameworks, Libraries & Programs
   * [Google Fonts](https://fonts.google.com/) - To find and import fonts used on the website
@@ -129,13 +129,24 @@ This website was deployed to GitHud pages.The steps to deploy are as follows:
   * From the source section drop-down menu, select the Master Branch
   * Once the master branch has been selected, the page will be automatically   refreshed with a detailed ribbon display to indicate the successful deployment.
 
-  The live link can be found here: https://stockman-jr.github.io/rabbithole-publishing/
+  The live link can be found here: 
 
 ---
 
 ## Credits
 
 ### Code
+
+I took inspiration from these two codepens in particular to help me build this game:
+  * https://codepen.io/aguscoppe/pen/oNbwYZg
+  * https://codepen.io/anandvikas/pen/RwxKagb
+
+CSS styles for buttons and the animated background was inspired from:
+  * https://codepen.io/P1N2O/pen/pyBNzX
+  * https://codepen.io/giana/pen/BZaGyP
+   
+   In general:
+  * [Stackoverflow](https://stackoverflow.com/) has been a huge help for finding solutions when I've been stuck on coding problems or if wanted to create something specific but didn't know how to.
 
 
 
