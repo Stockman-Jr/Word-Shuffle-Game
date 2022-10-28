@@ -46,6 +46,8 @@ ruleBtn.addEventListener('click', function () {
 //Get the button elements and add event listeners
 document.addEventListener("DOMContentLoaded", function () {
 
+  document.getElementById('high-score').innerHTML = localStorage.getItem("highscore");
+
   startBtn.addEventListener("click", () => {
     chooseDifficulty();
   })
@@ -115,7 +117,7 @@ function winCondition(array) {
   if (i != -1) {
     array.splice(i, 1);
     console.log(array);
-  } if (array.length === 10) {
+  } if (array.length === 11) {
     console.log(score);
     winGame();
   } else {
@@ -235,9 +237,17 @@ function gameOver() {
   quitBtn.classList.add('hidden');
 
   document.getElementById('heading').innerHTML = "Game Over";
+  
+  checkScore();
+  document.getElementById('high-score').innerHTML = score;
 
-  document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
-  You scored ${score} points!`;
+  if (score <= parseInt(highscore) || highscore === null) {
+    document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
+    You scored ${score} points!`;
+   } else if (score > parseInt(highscore)) {
+    document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
+    New high-score!`;
+   }
 
   wordBox.innerHTML = chosenWord;
 
@@ -255,10 +265,21 @@ function winGame() {
   category.classList.add('hidden');
   gameMsg.classList.remove('hidden');
 
-  document.getElementById('heading').innerHTML = "Good job! You won!";
-  document.getElementById('message').innerHTML = `The word was ${chosenWord}. <br/> 
-  You scored ${score} points!`;
-  
+  document.getElementById('heading').innerHTML = "You won!";
+
+  checkScore();
+
+  document.getElementById('high-score').innerHTML = score;
+
+  document.getElementById('heading').innerHTML = "You won!";
+
+  if (score <= parseInt(highscore) || highscore === null) {
+    document.getElementById('message').innerHTML = `Good job! You completed the ${gameMode} level! <br/> 
+    You scored ${score} points!`;
+   } else if (score > parseInt(highscore)) {
+    document.getElementById('message').innerHTML = `Good job! You completed the ${gameMode} level! <br/> 
+    New high-score!`;
+   }
   let playAgain = document.getElementById('play-again');
  
   playAgain.innerHTML = "Next level";
