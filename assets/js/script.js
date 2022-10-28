@@ -4,7 +4,7 @@ const startBtn = document.getElementById('start-btn');
 const lvlBtns = document.getElementsByClassName("lvl-btn");
 const guessBtn = document.getElementById('guess-btn');
 const quitBtn = document.getElementById('quit-btn');
-const modal = document.getElementById('rules-modal');
+const nextLvlBtn = document.getElementById('next-level');
 const userInput = document.getElementById('user-input');
 const scoreDisplay = document.getElementById('score');
 const wordBox = document.getElementById('word-box');
@@ -35,6 +35,7 @@ const hardWords = ['scarface', 'deadpool', 'superbad', 'hercules', 'godzilla', '
  * Function for modal popup to display the rules
  */
 ruleBtn.addEventListener('click', function () {
+  let modal = document.getElementById('rules-modal');
   modal.classList.remove('hidden');
   let closeModal = document.getElementById('close');
   closeModal.addEventListener('click', () => {
@@ -117,7 +118,7 @@ function winCondition(array) {
   if (i != -1) {
     array.splice(i, 1);
     console.log(array);
-  } if (array.length === 11) {
+  } if (array.length === 13) {
     console.log(score);
     winGame();
   } else {
@@ -137,6 +138,7 @@ function startGame(gameMode) {
   wordBox.classList.remove('hidden');
   gameModeArea.classList.add('hidden');
   ruleBtn.classList.add('hidden');
+  nextLvlBtn.classList.add('hidden');
   quitBtn.classList.remove('hidden');
   gameMsg.classList.add('hidden'); 
 
@@ -252,6 +254,7 @@ function gameOver() {
   wordBox.innerHTML = chosenWord;
 
   let playAgain = document.getElementById('play-again');
+  playAgain.classList.remove('hidden');
 
   playAgain.addEventListener('click', () => {
     document.location.reload()
@@ -264,6 +267,7 @@ function winGame() {
   userInput.classList.add('hidden');
   category.classList.add('hidden');
   gameMsg.classList.remove('hidden');
+  nextLvlBtn.classList.remove('hidden');
 
   document.getElementById('heading').innerHTML = "You won!";
 
@@ -280,10 +284,8 @@ function winGame() {
     document.getElementById('message').innerHTML = `Good job! You completed the ${gameMode} level! <br/> 
     New high-score!`;
    }
-  let playAgain = document.getElementById('play-again');
  
-  playAgain.innerHTML = "Next level";
-  playAgain.addEventListener('click', () => {
+  nextLvlBtn.addEventListener('click', () => {
     if (gameMode === "easy") {
    gameMode = "medium";
    
