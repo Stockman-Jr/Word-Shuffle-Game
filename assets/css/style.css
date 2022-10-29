@@ -17,6 +17,7 @@ body {
   height: 100vh;
   color: #9cd6dd;
 }
+ /*Background animation*/
 
 @keyframes gradient {
   0% {
@@ -73,7 +74,7 @@ h2 {
   padding: 1%;
 }
 
-/*Styling for the main game areas*/
+/*Styling for the different game areas*/
 
 main {
   width: 100%;
@@ -82,7 +83,7 @@ main {
   text-align: center;
   align-items: center;
   margin: 0 auto;
-} 
+}
 
 .game-area {
   width: 60%;
@@ -92,160 +93,153 @@ main {
   border: 3px solid #c8ff00;
   border-radius: 15px;
   margin-top: 50px;
-  }
-  
-  #word-box {
-    background-color: #9cd6dd;
-    color: #0c1338;
-    width: 100%;
-    padding: 15px;
-    font-size: 130%;
-    margin: 0 auto;
-  }
-  
-  .guess-area {
-    padding: 30px;
-  }
+}
 
-  .score-area {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+#word-box {
+  background-color: #9cd6dd;
+  color: #0c1338;
+  width: 100%;
+  padding: 15px;
+  font-size: 130%;
+  margin: 0 auto;
+}
 
-  /*Modal styling*/
+.guess-area {
+  padding: 30px;
+}
 
-  .modal {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
-    padding: 20px;
-    width: 60%;
-    border: 3px solid #9cd6dd;
-    border-radius: 20px;
-    color: #4c3855;
-  }
-  
-  #close {
-    color: black;
-    float: right;
-    cursor: pointer;
-    font-size: 30px;
-    width: 40px;
-    border: none;
-    border-radius: 50%;
-  }
+.score-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  /*Input and Buttons styling*/
-  input[type="text"] {
-    height: 40px;
-    margin-bottom: 20px;
-    width: 50%;
-    border-radius: 15px;
-    font-size: 16px;
-    padding: 5px 10px;
-    border: none;
+/*Modal styling*/
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 60%;
+  border: 3px solid #9cd6dd;
+  border-radius: 20px;
+  color: #4c3855;
+}
+
+#close {
+  color: black;
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+}
+
+/*Input and Buttons styling*/
+input[type="text"] {
+  height: 40px;
+  margin-bottom: 20px;
+  width: 50%;
+  border-radius: 15px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: none;
+}
+
+#start-btn {
+  width: 250px;
+  height: 60px;
+  text-transform: uppercase;
+}
+
+.button-wrapper {
+  display: block;
+}
+
+#quit-btn {
+  margin-top: 10px;
+}
+
+#play-again {
+  width: 150px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.lvl-btn {
+  margin: 5px;
+  width: fit-content;
+  padding: 0px 10px;
+}
+
+button {
+  height: 50px;
+  width: fit-content;
+  padding: 0px 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #9cd6dd;
+  cursor: pointer;
+  border-radius: 15px;
+  background: none;
+  border: 2px solid;
+  transition: 0.25s;
+}
+
+
+button:hover,
+button:focus {
+  border-color: #c8ff00;
+  color: rgb(179, 255, 0);
+  letter-spacing: 2px;
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: translateY(-0.25em);
+}
+
+/*Hidden elements*/
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 600px) {
+
+  .game-area {
+    width: 80%;
   }
 
   #start-btn {
-    width: 250px;
-    height: 60px;
-    text-transform: uppercase;
+    width: 80%;
   }
 
-  .button-wrapper {
-    display: block;
+  h2 {
+    font-size: 130%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #user-input {
+    width: 100%;
   }
 
-  #quit-btn {
-    margin-top: 10px;
+  h2 {
+    font-size: 120%;
   }
-
- 
-  #play-again {
-    width: 150px;
-    height: 50px;
-    margin-top: 20px;
-  }
-
-  .lvl-btn {
-    margin: 5px;
-    width: fit-content;
-    padding: 0px 10px;
-  }
-  
-  button {
-    height: 50px;
-    width: fit-content;
-    padding: 0px 10px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #9cd6dd;
-    cursor: pointer;
-    border-radius: 15px;
-    background: none;
-    border: 2px solid;
-    transition: 0.25s;
-  }
-  
-
-
-  button:hover,
-  button:focus {
-    border-color: #c8ff00;
-    color: rgb(179, 255, 0);
-    letter-spacing: 2px;
-  }
-  
-  .raise:hover,
-  .raise:focus {
-    box-shadow: 0 0.5em 0.5em -0.4em;
-    transform: translateY(-0.25em);
-  }
-
-
-
-  /*Hidden elements*/
-  
-  .hidden {
-    display: none;
-    visibility: hidden;
-  }
-
-  /*Media queries*/
-
-  @media screen and (max-width: 600px) {
-    .game-area {
-      width: 80%;
-    }
-
-    #start-btn {
-      width: 80%;
-    }
-  
-    h2 {
-      font-size: 130%;
-    }
-  }
-
-  @media screen and (max-width: 400px) {
-    #user-input {
-      width: 100%;
-    }
-    .game-area {
-      height: 60%;
-    }
-
-    h2 {
-      font-size: 120%;
-    }
-  }
-  
+}
