@@ -118,7 +118,7 @@ function winCondition(array) {
   if (index != -1) {
     array.splice(index, 1);
     console.log(array);
-  } if (array.length === 12) {
+  } if (array.length === 14) {
     console.log(score);
     winGame();
   } else {
@@ -166,6 +166,7 @@ function startGame(gameMode) {
     shuffledWord = shuffleWord(chosenWord);
     wordBox.innerHTML = shuffledWord;
     category.innerHTML = "Category: Movie Titles";
+    nextLvlBtn.style.display = "none";
   }
 
 
@@ -224,7 +225,6 @@ function checkRemainingLives() {
   if (!localStorage.getItem("highscore")) {
     localStorage.setItem("highscore", score);
   }
-
     if (score <= highscore) {
      return;
     } else if (score > highscore) {
@@ -274,8 +274,9 @@ function winGame() {
   guessBtn.classList.add('hidden');
   userInput.classList.add('hidden');
   category.classList.add('hidden');
-  gameMsg.classList.remove('hidden');
+  gameMsg.classList.remove('hidden'); 
   nextLvlBtn.classList.remove('hidden');
+  
 
   checkScore();
 
@@ -290,17 +291,16 @@ function winGame() {
     document.getElementById('message').innerHTML = `Good job! You completed the ${gameMode} level! <br/> 
     New high-score!`;
    } 
- 
-  nextLvlBtn.addEventListener('click', () => {
-    if (gameMode === "easy") {
-   gameMode = "medium";
-   
-  } else if (gameMode === "medium") {
-    
-    gameMode = "hard";
-  }
-  startGame(gameMode);
-  })  
+
+   nextLvlBtn.addEventListener('click', () => {  
+     if (gameMode === "easy") {     
+    gameMode = "medium";
+    startGame(gameMode);
+   } else if (gameMode === "medium") {
+     gameMode = "hard";
+     startGame(gameMode);
+   } 
+   })  
 }
 
 //Event listeners for guess button, both mouseclick and keydown
@@ -315,5 +315,7 @@ guessBtn.addEventListener('click', () => {
 
 quitBtn.addEventListener('click', () => {
   document.location.reload();
-  //localStorage.clear();
+  if(gameMode === "hard"){
+    localStorage.clear();
+  }
 })
