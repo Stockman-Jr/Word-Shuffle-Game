@@ -47,7 +47,7 @@ ruleBtn.addEventListener('click', function () {
 //Get the button elements and add event listeners
 document.addEventListener("DOMContentLoaded", function () {
 
-  document.getElementById('high-score').innerHTML = localStorage.getItem("highscore");
+document.getElementById('high-score').innerHTML = localStorage.getItem("highscore");
 
   startBtn.addEventListener("click", () => {
     chooseDifficulty();
@@ -113,10 +113,10 @@ function shuffleWord(word) {
 
 function winCondition(array) {
   var usedWord = chosenWord;
-  var i = array.indexOf(usedWord);
-  console.log(i);
-  if (i != -1) {
-    array.splice(i, 1);
+  var index = array.indexOf(usedWord);
+  console.log(index);
+  if (index != -1) {
+    array.splice(index, 1);
     console.log(array);
   } if (array.length === 12) {
     console.log(score);
@@ -174,6 +174,7 @@ function startGame(gameMode) {
  */
 
 function checkAnswer() {
+  let letterCheck = /^[A-Za-z]+$/;
   if (userInput.value.toLowerCase() === chosenWord) {
     wordBox.innerHTML = "Correct!"
     score++;
@@ -185,11 +186,15 @@ function checkAnswer() {
     } else if (gameMode === "hard") {
       winCondition(hardWords);
     }
-  } else if (userInput.value !== chosenWord) {
+  } else if (userInput.value !== chosenWord && userInput.value.match(letterCheck)) {
     livesRemaining--;
     lives.innerHTML = livesRemaining;
     wordBox.innerHTML = `Bzzzt, not quite. ${livesRemaining} lives remaining!`;
     checkRemainingLives();
+  } else {
+    alert('Oops, please input letters only!')
+    userInput.value = "";
+    userInput.focus();
   }
 
 }
