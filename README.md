@@ -100,11 +100,13 @@ W3C was used to validate html code on all pages and the CSS code. The css code w
 
 ### Bugs
 
-#### 
-  * **Expected** - 
-  * **Testing** - 
-  * **Result** - 
-  * **Fix** - 
+#### Text on button moves when resizing window
+  * **Expected** - for the text on the button to stay in one place, centered inside button at all screen sizes
+  * **Testing** - launched website through terminal to see appearance, tried removing and adding different css styles in Chrome dev tools
+  * **Result** - by turning css elements on and off in chrome dev tools i eventually found out that percentage values
+                 on some elements were the cause of this
+  * **Fix** - by adding a main div to wrap around the game area and changing the percentage values
+affecting the text to pixels 
 
   #### 
   * **Expected** -

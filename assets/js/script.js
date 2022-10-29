@@ -118,7 +118,7 @@ function winCondition(array) {
   if (i != -1) {
     array.splice(i, 1);
     console.log(array);
-  } if (array.length === 13) {
+  } if (array.length === 12) {
     console.log(score);
     winGame();
   } else {
