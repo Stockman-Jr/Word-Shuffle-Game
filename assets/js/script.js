@@ -136,14 +136,17 @@ function startGame(gameMode) {
   guessBtn.classList.remove('hidden');
   userInput.classList.remove('hidden');
   wordBox.classList.remove('hidden');
+  category.classList.remove('hidden');
+  quitBtn.classList.remove('hidden');
+
   gameModeArea.classList.add('hidden');
   ruleBtn.classList.add('hidden');
-  nextLvlBtn.classList.add('hidden');
-  quitBtn.classList.remove('hidden');
+  nextLvlBtn.classList.add('hidden'); 
   gameMsg.classList.add('hidden'); 
 
   document.getElementById('heading').innerHTML = "Guess the word!";
 
+  checkScore();
   userInput.value = "";
   userInput.focus();
 
@@ -222,9 +225,9 @@ function checkRemainingLives() {
     localStorage.setItem("highscore", score);
   }
 
-    if (score <= parseInt(highscore)) {
+    if (score <= highscore) {
      return;
-    } else if (score > parseInt(highscore)) {
+    } else if (score > highscore) {
       document.getElementById('high-score').innerHTML = score;
       localStorage.setItem("highscore", score);
       console.log(highscore);
@@ -286,16 +289,14 @@ function winGame() {
    } else if (score > parseInt(highscore)) {
     document.getElementById('message').innerHTML = `Good job! You completed the ${gameMode} level! <br/> 
     New high-score!`;
-   } /*else if (score === 6) {
-    document.getElementById('message').innerHTML = `Woohoo! You completed all the levels! <br/>
-    You are hereby the new word shuffle champion! `;
-   }*/
+   } 
  
   nextLvlBtn.addEventListener('click', () => {
     if (gameMode === "easy") {
    gameMode = "medium";
    
   } else if (gameMode === "medium") {
+    
     gameMode = "hard";
   }
   startGame(gameMode);
@@ -314,4 +315,5 @@ guessBtn.addEventListener('click', () => {
 
 quitBtn.addEventListener('click', () => {
   document.location.reload();
+  //localStorage.clear();
 })
