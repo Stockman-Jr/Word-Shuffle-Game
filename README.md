@@ -36,16 +36,22 @@ The goal of the game is to score as many points as possible, if the user guesses
 ### Existing Features
 
 #### Header
+![Header](assets/readme-images/word-shuffle.png)
   * Is a simple heading featured at the top of the page that tells the name of the game.
 
-#### Rules
+#### Start Area
+![Start Area](assets/readme-images/startgame-area.png)
+  * Is simple but clear and provides the user with two interactive buttons.
+  * The start game button will initiate the game and take the user to the game options.
   * The rules button will provide the user with information of how to play the game in a pop-up window when clicked.
 
 #### The game options
+![Choose difficulty](assets/readme-images/choose-difficulty.png)
   * The game options lets the user choose from different difficulties which includes: easy(contains 4-5 letters in each word), medium(6-7 letters) and hard(8-9) letters.
   * This section provides the user with interactive buttons that the user can click to choose difficulty and start the game.
 
 #### Playing the game
+![Game Area](assets/readme-images/game-area.png)
   * This section appears once the user have chosen a difficulty, and informs the user what category the words are tied to,
   a box containing the shuffled word, a input for the user to type their answer, and a interactive button that lets the user 
   submit their answer.
@@ -53,11 +59,14 @@ The goal of the game is to score as many points as possible, if the user guesses
   in a guess, users are also able to press the Enter key instead of clicking on the guess button for convinience.
 
 #### Score and life 
+![Score Area](assets/readme-images/score-area.png)
   * Is provided underneath the main game area and lets the user know what their current score is, what their highscore is and how many lives they have left.
 
 #### The game results
+![Game Over Screen](assets/readme-images/lose-message.png)
   * If the user reaches 0 life, the game will be over and a message will be displayed on screen and makes it clear to the user what the correct answer was, what score they ended up with and if they set a new high-score.
   * A button will also be provided for the user to allow them to play again, and restarts the game.
+  ![Win Screen](assets/readme-images/win-message.png)
   * If the user clears a difficulty or wins the game by clearing all the difficulties a congratulatory message will be displayed and let them know if a new high-score has been set.
   * Here the user will be provided with two interactive buttons that lets them either continue to the next difficulty or quit the game.
 

@@ -118,7 +118,7 @@ function winCondition(array) {
   if (i != -1) {
     array.splice(i, 1);
     console.log(array);
-  } if (array.length === 13) {
+  } if (array.length === 10) {
     console.log(score);
     winGame();
   } else {
@@ -268,8 +268,6 @@ function winGame() {
   category.classList.add('hidden');
   gameMsg.classList.remove('hidden');
   nextLvlBtn.classList.remove('hidden');
-
-  document.getElementById('heading').innerHTML = "You won!";
 
   checkScore();
 
