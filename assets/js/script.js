@@ -118,7 +118,7 @@ function winCondition(array) {
   if (i != -1) {
     array.splice(i, 1);
     console.log(array);
-  } if (array.length === 10) {
+  } if (array.length === 13) {
     console.log(score);
     winGame();
   } else {
@@ -281,7 +281,10 @@ function winGame() {
    } else if (score > parseInt(highscore)) {
     document.getElementById('message').innerHTML = `Good job! You completed the ${gameMode} level! <br/> 
     New high-score!`;
-   }
+   } /*else if (score === 6) {
+    document.getElementById('message').innerHTML = `Woohoo! You completed all the levels! <br/>
+    You are hereby the new word shuffle champion! `;
+   }*/
  
   nextLvlBtn.addEventListener('click', () => {
     if (gameMode === "easy") {

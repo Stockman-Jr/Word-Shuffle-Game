@@ -82,20 +82,19 @@ The goal of the game is to score as many points as possible, if the user guesses
 
 ### Lighthouse Testing
 
-
-#### Index Page
-
-
-#### Application Page
+  * I used Lighthouse in Chrome Dev tools to test performance, accessibility, best practices and SEO.
+![Lighthouse](assets/readme-images/lighthouse.png)
 
 
 ### Validator Testing
 
+W3C was used to validate html code on all pages and the CSS code. The css code was approved on first check, some end trailing slashes had to be removed from html to pass.
 
 #### CSS
-
+![CSS validation](assets/readme-images/css-validator.png)
 
 #### HTML
+![HTML validation](assets/readme-images/html-validator.png)
 
 
 
@@ -131,6 +130,7 @@ The goal of the game is to score as many points as possible, if the user guesses
   * JavaScript
 
 ### Frameworks, Libraries & Programs
+  * [Fontawesome](https://fontawesome.com/) - For adding icons
   * [Google Fonts](https://fonts.google.com/) - To find and import fonts used on the website
   * [GitHub](https://github.com/) - To save and store files for the website.
   * Git - For version control.
@@ -145,7 +145,7 @@ This website was deployed to GitHud pages.The steps to deploy are as follows:
   * From the source section drop-down menu, select the Master Branch
   * Once the master branch has been selected, the page will be automatically   refreshed with a detailed ribbon display to indicate the successful deployment.
 
-  The live link can be found here: 
+  The live link can be found here: https://stockman-jr.github.io/Word-Shuffle-Game/
 
 ---
 
@@ -166,4 +166,4 @@ CSS styles for buttons and the animated background was inspired from:
 
 
 
-### Content
+
