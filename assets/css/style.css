@@ -59,6 +59,11 @@ h2 {
   color: #c6f3e9;
 }
 
+#rules {
+  font-size: 80%;
+  line-height: 1.5em;
+}
+
 .scores,
 .life {
   margin: 20px;

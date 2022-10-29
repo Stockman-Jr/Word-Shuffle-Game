@@ -14,30 +14,34 @@
 
 <body>
 
- 
-    <!--Intro & word area-->
+    <!--Main game area-->
     <main>
-        <div class="header"><h1>Word Shuffle</h1></div>
+        <div class="header">
+            <h1>Word Shuffle</h1>
+        </div>
         <div class="game-area">
             <h2 id="heading">Guess the word!</h2>
             <div class="display-word">
+                <!--Rules-->
                 <button id="rule-btn" class="raise">Rules</button>
                 <div id="rules-modal" class="modal hidden">
                     <div class="modal-content">
                         <button id="close">x</button>
                         <p id="rules">
                             Choose a level: easy(4-5 letters), medium(6-7 letters) or
-                            hard(8-9 letters). <br>
+                            hard(8-10 letters). <br>
                             Each difficulty is tied to a specific category, and contains 15 words.<br>
                             A word will be chosen randomly, where the letters will be
                             shuffled around.<br>
                             Your task is to guess what word it is and score as many points
-                            as possible. Guess all the words right and you've won the game. <br>
+                            as possible.<br> 
+                            You need to guess 8 words correctly to pass a level. <br>
                             You will have 5 lives in total. Guess wrong
                             and lose a life, reach 0 lives and the game will be over!
                         </p>
                     </div>
                 </div>
+                <!--Category and word display-->
                 <p id="category"></p>
 
                 <div id="word-box" class="hidden">
@@ -56,7 +60,7 @@
                     Start Game!
                 </button>
 
-                <input type="text" id="user-input" class="hidden">
+                <input type="text" id="user-input" class="hidden" autocomplete="off">
 
                 <div id="game-mode" class="hidden">
                     <h3>Choose difficulty:</h3>
@@ -66,10 +70,10 @@
                 </div>
 
                 <div class="button-wrapper">
-                <button id="guess-btn" class="hidden raise">Guess!</button>
-                <button id="next-level" class="hidden raise">Next Level</button>
-                <button id="quit-btn" class="hidden raise">Quit Game</button>               
-            </div>
+                    <button id="guess-btn" class="hidden raise">Guess!</button>
+                    <button id="next-level" class="hidden raise">Next Level</button>
+                    <button id="quit-btn" class="hidden raise">Quit Game</button>
+                </div>
 
             </div>
 
@@ -85,8 +89,8 @@
 
     <!--Fontawesome script-->
     <script src="https://kit.fontawesome.com/0a6fdb57b6.js" crossorigin="anonymous"></script>
-    
-     <!--Javascript-->
+
+    <!--Javascript-->
     <script src="assets/js/script.js"></script>
 
 
