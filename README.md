@@ -1,10 +1,12 @@
 # Word Shuffle
 
-Word Shuffle is a simple game that tickles the brain of the user by taking a word and shuffle the letters around.
+World Shuffle is a simple game that tickles the brain of the user by taking a word and shuffle around the letters.
 While the game itself is quite simple, the task of solving what word it is might be more challenging than you'd think.
-The user will get to choose between three difficulties, where each difficulty is tied to a specific category.
-A word will be randomly picked for the user to guess, and each correct word will provide a point.
-The goal is to get as many points as possible, if the user guesses wrong five times, the game will be over!
+The user will get to choose between three difficulties, where each difficulty is tied to a specific category and contains
+15 words.
+A word will be randomly picked for the user to guess and each correct word will provide a point, and if the 
+user guesses all words correctly in one difficulty, that level will be cleared.
+The goal of the game is to score as many points as possible, if the user guesses wrong five times, the game will be over!
 
 
 - - - 
@@ -34,7 +36,7 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
 ### Existing Features
 
 #### Header
-  * Is a simple heading that tells the name of the game.
+  * Is a simple heading featured at the top of the page that tells the name of the game.
 
 #### Rules
   * The rules button will provide the user with information of how to play the game in a pop-up window when clicked.
@@ -53,11 +55,16 @@ The goal is to get as many points as possible, if the user guesses wrong five ti
 #### Score and life 
   * Is provided underneath the main game area and lets the user know what their current score is, what their highscore is and how many lives they have left.
 
-#### Game over
+#### The game results
+  * If the user reaches 0 life, the game will be over and a message will be displayed on screen and makes it clear to the user what the correct answer was, what score they ended up with and if they set a new high-score.
+  * A button will also be provided for the user to allow them to play again, and restarts the game.
+  * If the user clears a difficulty or wins the game by clearing all the difficulties a congratulatory message will be displayed and let them know if a new high-score has been set.
+  * Here the user will be provided with two interactive buttons that lets them either continue to the next difficulty or quit the game.
 
 
 ### Future Features
-
+  * I would like to implement more categories and maybe a feature that would allow the user to choose category.
+  * Or if the user has cleared all the difficulties, add a new category to each difficulty.
 
 ---
 
