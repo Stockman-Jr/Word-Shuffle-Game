@@ -2,11 +2,11 @@
 
 World Shuffle is a simple game that tickles the brain of the user by taking a word and shuffle around the letters.
 While the game itself is quite simple, the task of solving what word it is might be more challenging than you'd think.
-The user will get to choose between three difficulties, where each difficulty is tied to a specific category and contains
-15 words.
+The user will get to choose between three difficulties, where each difficulty is tied to a specific category.
 A word will be randomly picked for the user to guess and each correct word will provide a point, and if the 
-user guesses all words correctly in one difficulty, that level will be cleared.
+user guesses 8 words correctly, that level will be cleared.
 The goal of the game is to score as many points as possible, if the user guesses wrong five times, the game will be over!
+![Am I Responsive](assets/readme-images/am-i-responsive.png)
 
 
 - - - 
@@ -74,6 +74,7 @@ The goal of the game is to score as many points as possible, if the user guesses
 ### Future Features
   * I would like to implement more categories and maybe a feature that would allow the user to choose category.
   * Or if the user has cleared all the difficulties, add a new category to each difficulty.
+  * A board to display previous high-scores.
 
 ---
 
