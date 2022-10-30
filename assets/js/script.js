@@ -195,6 +195,8 @@ function checkAnswer() {
     lives.innerHTML = livesRemaining;
     wordBox.innerHTML = `Bzzzt, not quite. ${livesRemaining} lives remaining!`;
     checkRemainingLives();
+    userInput.value = "";
+    userInput.focus();
   } else {
     alert('Oops, please input letters only!')
     userInput.value = "";
