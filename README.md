@@ -7,6 +7,7 @@ A word will be randomly picked for the user to guess and each correct word will 
 user guesses 8 words correctly, that level will be cleared.
 The goal of the game is to score as many points as possible, if the user guesses wrong five times, the game will be over!
 ![Am I Responsive](assets/readme-images/am-i-responsive.png)
+Link to site: https://stockman-jr.github.io/Word-Shuffle-Game/
 
 
 - - - 
@@ -52,10 +53,11 @@ The goal of the game is to score as many points as possible, if the user guesses
 
 #### Playing the game
 ![Game Area](assets/readme-images/game-area.png)
-  * This section appears once the user have chosen a difficulty, and informs the user what category the words are tied to,
-  a box containing the shuffled word, a input for the user to type their answer, and a interactive button that lets the user 
+  * This section appears once the user has chosen a difficulty, and informs the user what category the words are tied to,
+  a box containing the shuffled word, an input for the user to type their answer, and an interactive button that lets the user 
   submit their answer.
-  * The input features an auto focus so that the user don't have to click on the input window everytime they want to type
+  * A message will be displayed for the user that will let them know if they've guessed correctly or not.
+  * The input features an auto focus so that the user doesn't have to click on the input window every time they want to type
   in a guess, users are also able to press the Enter key instead of clicking on the guess button for convinience.
 
 #### Score and life 
@@ -80,7 +82,8 @@ The goal of the game is to score as many points as possible, if the user guesses
 
 ## Testing
 
-Testing was ongoing throughout the entire build, Chrome Developers Tools was actively used for debugging and to check for, identify and resolve problems. I have also used Chrome Dev tools device toolbar to check responsiveness on different screen sizes, which I will say is okay but not perfect on the smaller screen sizes. I have tested the website on my phone and in the following browsers without noticing any issues:
+Testing was ongoing throughout the entire build, Chrome Developers Tools was actively used for debugging and to check for, identify and resolve problems. I have also used Chrome Dev tools device toolbar to check responsiveness on different screen sizes.
+I have tested the game on my phone and in the following browsers without noticing any issues:
   * Chrome
   * Mozilla Firefox
   * Microsoft Edge
@@ -110,8 +113,7 @@ W3C was used to validate html code on all pages and the CSS code. The css code w
 #### Text on button moves when resizing window
   * **Expected** - for the text on the button to stay in one place, centered inside button at all screen sizes
   * **Testing** - launched website through terminal to see appearance, tried removing and adding different css styles in Chrome dev tools
-  * **Result** - by turning css elements on and off in chrome dev tools i eventually found out that percentage values
-                 on some elements were the cause of this
+  * **Result** - by turning css elements on and off in chrome dev tools i eventually found out that percentage values on some elements were the cause of this
   * **Fix** - by adding a main div to wrap around the game area and changing the percentage values
 affecting the text to pixels 
 
@@ -119,12 +121,12 @@ affecting the text to pixels
   * **Expected** - for high-score to update when playing through multiple difficulties
   * **Testing** - launched website through terminal, tried debugging through chrome dev tools console to find the issue, edited code and moved it around
   * **Result** - highscore only updated if you played one difficulty, but it you started on easy and continued to medium, highscore wouldnt update
-  * **Fix** - removed parseInt on checkScore function then it worked
+  * **Fix** - removed parseInt on checkScore function, which got it running
 
   #### Next level button is not hidden when playing hard level
   * **Expected** - to have next level button hidden when playing on hard mode
   * **Testing** - launched website through terminal, tried debugging through chrome dev tools console to find the issue, tested adding hidden classlist with alot of different statements and conditions
-  * **Result** - the button wouldn't refused to go away, it would still appear on hard level but it would disappear if it was clicked 
+  * **Result** - the button refused to go away, it would still appear on hard level but it would disappear when clicked 
   * **Fix** - added nextLvlBtn.style.display = "none" instead in the startGame function
 
 ### Unsolved bugs
@@ -150,7 +152,7 @@ affecting the text to pixels
 
 ## Deployment
 
-This website was deployed to GitHud pages.The steps to deploy are as follows:
+This website was deployed to GitHub pages.The steps to deploy are as follows:
   * In the GitHub repository, navigate to the Settings tab
   * From the source section drop-down menu, select the Master Branch
   * Once the master branch has been selected, the page will be automatically   refreshed with a detailed ribbon display to indicate the successful deployment.
