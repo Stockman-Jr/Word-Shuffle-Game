@@ -26,19 +26,24 @@
                 <button id="rule-btn" class="raise">Rules</button>
                 <div id="rules-modal" class="modal hidden">
                     <div class="modal-content">
-                        <button id="close">x</button>
+
+                        <div class="modal-header">
+                            <button id="close">x</button>
+                        </div>
+
                         <p id="rules">
                             Choose a level: easy(4-5 letters), medium(6-7 letters) or
                             hard(8-10 letters). <br>
-                            Each difficulty is tied to a specific category, and contains 15 words.<br>
+                            Each difficulty is tied to a specific category.<br>
                             A word will be chosen randomly, where the letters will be
                             shuffled around.<br>
                             Your task is to guess what word it is and score as many points
-                            as possible.<br> 
+                            as possible.<br>
                             You need to guess 8 words correctly to pass a level. <br>
                             You will have 5 lives in total. Guess wrong
                             and lose a life, reach 0 lives and the game will be over!
                         </p>
+
                     </div>
                 </div>
                 <!--Category and word display-->
@@ -63,7 +68,7 @@
                 <input type="text" id="user-input" class="hidden" autocomplete="off">
 
                 <div id="game-mode" class="hidden">
-                    
+
                     <h3>Choose difficulty:</h3>
                     <button class="lvl-btn raise" data-type="easy">Easy <i class="fa-solid fa-hat-wizard"></i></button>
                     <button class="lvl-btn raise" data-type="medium">Medium <i class="fa-solid fa-paw"></i></button>
@@ -79,16 +84,16 @@
             </div>
 
         </div>
-          <!--Score and life area-->
-    <div class="score-area">
-        <p class="scores">Current score: <span id="score">0</span></p>
-        <p class="scores">High-score: <span id="high-score">0</span></p>
-        <p class="life">Lives: <span id="lives">5</span></p>
-    </div>
+        <!--Score and life area-->
+        <div class="score-area">
+            <p class="scores">Current score: <span id="score">0</span></p>
+            <p class="scores">High-score: <span id="high-score">0</span></p>
+            <p class="life">Lives: <span id="lives">5</span></p>
+        </div>
 
     </main>
 
-  
+
     <!--Fontawesome script-->
     <script src="https://kit.fontawesome.com/0a6fdb57b6.js" crossorigin="anonymous"></script>
 

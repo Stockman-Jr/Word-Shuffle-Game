@@ -125,10 +125,14 @@ main {
   height: 100%;
 }
 
+.modal-header {
+  height: 40px;
+}
+
 .modal-content {
   background-color: #fff;
   margin: 15% auto;
-  padding: 20px;
+  padding: 2px 16px;
   width: 60%;
   border: 3px solid #9cd6dd;
   border-radius: 20px;
